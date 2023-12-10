@@ -20,4 +20,10 @@
 
 ##### <p align="center"> *If your signature file is present at the root, you can continue.* </p>
 
-##### <p align="center"> *You must prove that the signature of your virtual machine matches the signature present in your file. You have to go to your terminal, go to the location where your VM is located and do this command: \\ shasum VirtualBox.vdi // this may take several minutes.. If it matches well, you can continue !* </p>
+##### <p align="center"> *You must prove that the signature of your virtual machine matches the signature present in your file. You need to go to your terminal, go to the location where your VM is located and run this command :* </p>
+
+##### <p align="center"> **shasum *YourmachineName*.vdi** </p>
+
+##### <p align="center"> *this may take several minutes.. Make sure your virtual machine is on Off. If it matches well, you can continue !* </p>
+
+##### <p align="center"> ** </p>
