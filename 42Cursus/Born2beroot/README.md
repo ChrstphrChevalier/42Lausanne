@@ -1,1 +1,1 @@
-# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/61fdf839-eb86-4838-b297-d60437c4918a) </p>
+# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/46094f41-2de6-452c-9984-ae60a0b4982d) </p>
