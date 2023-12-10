@@ -1,19 +1,42 @@
-# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/0b914e58-17e3-418d-9cda-1bbaaaa82b79) </p>
+# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/a6a9416a-20b5-4027-b0ce-f191cf888502) </p>
 
-# <p align="center"> *Hey*, Nice to meet you ! 🙂 </p>
+# <p align="center"> - Goals - </p>
 
-### <p align="center"> 🇫🇷 *I'm Christopher* ✌🏼 </p>
+### <p align="center"> *Create a library, including all the functions requested by the subject. Each function must be created by us.*
 
-##### <p align="center"> ⏳ Beyond my experiences, I am now a student at the 42Lausanne school, aiming to become a digital technology architect ! 🚀 </p>
+### <p align="center"> *the requested functions are :* </p>
 
-##### <p align="center"> 📖 Since October 23, 2023, I have been rigorously studying educational projects that challenge me and broaden my programming skills. 🌋 </p>
+### <p align="center"> -  </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
+### <p align="center"> - </p>
 
-##### <p align="center"> 🦾 Former sous chef, my ability to adapt evolves as the difficulty increases. Success as a goal ! 🎖️ </p>
+# <p align="center"> - Result - </p>
 
-##### <p align="center"> 🖥️ A true technology enthusiast, I want to move towards cybersecurity, artificial intelligence, web development and master the concepts. Having a vast learning window in these constantly evolving environments, every day is a new challenge that I take on without hesitation ! 🔓 </p>
-
-##### <p align="center"> 🌐 I'm on Github to share my experiences, the passion I discovered for IT, and the work environments I've contributed to throughout my career. 🌍 </p>
-
-#### <p align="center"> 🔥🔥 *Nothing is crazy, nothing is impossible, since we believe in it, we go for it !* 🔥🔥 </p>
-
-# <p align="center"> [![waziz's 42 stats](https://badge.mediaplus.ma/binary/waziz?1337Badge=off&UM6P=off)](https://github.com/oakoudad/badge42) </p>
+# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/ce91d11d-53c4-4d83-949a-391c1c46ccca) </p>
