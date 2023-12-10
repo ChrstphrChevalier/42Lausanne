@@ -11,4 +11,13 @@
 # <p align="center"> - Defense - </p>
 
 ### <p align="center"> *** Preliminaries *** </p>
+
 ##### <p align="center"> *Your presence is required, if you are there, it’s validated !* </p>
+
+### <p align="center"> *** General Instructions *** </p>
+
+##### <p align="center"> *Throughout the evaluation, you must and assist your evaluator in all these questions !* </p>
+
+##### <p align="center"> *If your signature file is present at the root, you can continue.* </p>
+
+##### <p align="center"> *You must prove that the signature of your virtual machine matches the signature present in your file. You have to go to your terminal, go to the location where your VM is located and do this command: \\ shasum VirtualBox.vdi // this may take several minutes.. If it matches well, you can continue !* </p>
