@@ -41,9 +41,9 @@
 ##### <p align="center"> - *ft_putendl_fd* - </p>
 ##### <p align="center"> - *ft_putnbr_fd* - </p>
 
-### <p align="center"> !! WARNING !! </p>
+### <p align="center"> !! **WARNING** !! </p>
 
-##### <p align="center"> *- All functions are subject to norminette rules ! -* </p>
+### <p align="center"> - All functions are subject to norminette rules ! - </p>
 
 # <p align="center"> - Result - </p>
 
