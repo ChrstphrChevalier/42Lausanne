@@ -26,4 +26,20 @@
 
 ##### <p align="center"> *this may take several minutes.. Make sure your virtual machine is on Off. If it matches well, you can continue !* </p>
 
-##### <p align="center"> ** </p>
+##### <p align="center"> *As a precaution, you should duplicate your virtual machine. For that it is necessary :* </p>
+
+##### <p align="center"> *- Open VirtualBox;* </p>
+##### <p align="center"> *- Right click on your Vm;* </p>
+##### <p align="center"> *- Click on Clone;* </p>
+##### <p align="center"> *- Be careful to take the right path;* </p>
+##### <p align="center"> *- Be careful to change the name of your Clone;* </p>
+##### <p align="center"> *- Select "Generate new MAC addresses for all network adapters";* </p>
+##### <p align="center"> *- Click Continue;* </p>
+##### <p align="center"> *- Select "Full clone";* </p>
+##### <p align="center"> *- Click Continue;* </p>
+##### <p align="center"> *- Select "Everything";* </p>
+##### <p align="center"> *- Click Clone;* </p>
+
+##### <p align="center"> *it may take a little time...* </p>
+
+##### <p align="center"> *Select the virtual machine to clone and launch it* </p>
