@@ -43,3 +43,5 @@
 ##### <p align="center"> *it may take a little time...* </p>
 
 ##### <p align="center"> *Select the virtual machine to clone and launch it* </p>
+
+##### <p align="center"> *If it launches then it is validated !* </p>
