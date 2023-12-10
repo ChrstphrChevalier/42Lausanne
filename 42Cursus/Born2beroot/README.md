@@ -1,5 +1,9 @@
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/46094f41-2de6-452c-9984-ae60a0b4982d) </p>
 
+# <p align="center"> - Goals - </p>
+
+### <p align="center"> *The "born2beroot" project consists of creating a virtual machine under Linux, using a specific distribution. We need to configure this virtual machine by implementing security elements such as firewall, SSH, and root user privileges. The project aims to teach students the basic concepts of system administration, computer security and managing a Linux machine.* </p>
+
 # <p align="center"> - Project - </p>
 
 ##### <p align="center"> *To do this you can rely on* [THIS GUIDE](https://github.com/pasqualerossi/Born2BeRoot-Guide) *by* [Pasquale Rossi](https://github.com/pasqualerossi/) </p>
