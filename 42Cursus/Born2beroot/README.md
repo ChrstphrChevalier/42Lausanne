@@ -45,3 +45,6 @@
 ##### <p align="center"> *Select the virtual machine to clone and launch it* </p>
 
 ##### <p align="center"> *If it launches then it is validated !* </p>
+
+### <p align="center"> *** Mandatory Part *** </p>
+
