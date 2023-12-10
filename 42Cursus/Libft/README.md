@@ -41,6 +41,10 @@
 ##### <p align="center"> - *ft_putendl_fd* - </p>
 ##### <p align="center"> - *ft_putnbr_fd* - </p>
 
+### <p align="center"> !! WARNING !! </p>
+
+##### <p align="center"> *- All functions are subject to norminette rules ! -* </p>
+
 # <p align="center"> - Result - </p>
 
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/ce91d11d-53c4-4d83-949a-391c1c46ccca) </p>
