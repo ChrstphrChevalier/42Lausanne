@@ -1,3 +1,5 @@
+# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/11468208-683a-4d92-8af3-35bd637876ed) </p>
+
 # <p align="center"> *Hey*, Nice to meet you ! 🙂 </p>
 
 ### <p align="center"> 🇫🇷 *I'm Christopher* ✌🏼 </p>
