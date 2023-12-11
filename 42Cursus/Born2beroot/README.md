@@ -12,43 +12,8 @@
 
 ##### <p align="center"> *Your signature file cannot be exactly like mine but it should look like it. You only have to push this file into your Born2beroot repository !* </p>
 
-# <p align="center"> - Defense - </p>
+# <p align="center"> - Result - </p>
 
-### <p align="center"> *** Preliminaries *** </p>
+# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/693c4c6f-d0dc-47e9-85bb-d2fb16635712) </p>
 
-##### <p align="center"> *Your presence is required, if you are there, it’s validated !* </p>
-
-### <p align="center"> *** General Instructions *** </p>
-
-##### <p align="center"> *Throughout the evaluation, you must and assist your evaluator in all these questions !* </p>
-
-##### <p align="center"> *If your signature file is present at the root, you can continue.* </p>
-
-##### <p align="center"> *You must prove that the signature of your virtual machine matches the signature present in your file. You need to go to your terminal, go to the location where your VM is located and run this command :* </p>
-
-##### <p align="center"> **shasum *YourmachineName*.vdi** </p>
-
-##### <p align="center"> *this may take several minutes.. Make sure your virtual machine is on Off. If it matches well, you can continue !* </p>
-
-##### <p align="center"> *As a precaution, you should duplicate your virtual machine. For that it is necessary :* </p>
-
-##### <p align="center"> - Open VirtualBox; </p>
-##### <p align="center"> - Right click on your Vm; </p>
-##### <p align="center"> - Click on Clone; </p>
-##### <p align="center"> - Be careful to take the right path; </p>
-##### <p align="center"> - Be careful to change the name of your Clone; </p>
-##### <p align="center"> - Select "Generate new MAC addresses for all network adapters"; </p>
-##### <p align="center"> - Click Continue; </p>
-##### <p align="center"> - Select "Full clone"; </p>
-##### <p align="center"> - Click Continue; </p>
-##### <p align="center"> - Select "Everything"; </p>
-##### <p align="center"> - Click Clone; </p>
-
-##### <p align="center"> *it may take a little time...* </p>
-
-##### <p align="center"> *Select the virtual machine to clone and launch it* </p>
-
-##### <p align="center"> *If it launches then it is validated !* </p>
-
-### <p align="center"> *** Mandatory Part *** </p>
-
+# <p align="center"> - #end - </p>
