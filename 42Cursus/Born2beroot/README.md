@@ -14,7 +14,9 @@
 
 # <p align="center"> - Evals - </p>
 
-##### <p align="center"> *Questions asked in defense* [RATING 42](https://rphlr.github.io/42-Evals/Cursus/Born2beroot/)
+##### <p align="center"> *Questions asked in defense :* </p>
+
+##### <p align="center"> - [RATING 42](https://rphlr.github.io/42-Evals/Cursus/Born2beroot/) - </p>
 
 # <p align="center"> - Result - </p>
 
