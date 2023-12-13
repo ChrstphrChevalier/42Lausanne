@@ -14,7 +14,7 @@
 
 ##### <p align="center"> *Questions asked in defense :* </p>
 
-##### <p align="center"> - [RATING 42](https://rphlr.github.io/42-Evals/) - </p>
+##### <p align="center"> - [RATING 42](https://github.com/rphlr/42-Evals/tree/main/Cursus/Ft_printf) - </p>
 
 # <p align="center"> - Result - </p>
 
