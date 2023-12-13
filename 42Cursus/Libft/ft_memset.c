@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 00:02:04 by waziz             #+#    #+#             */
-/*   Updated: 2023/10/25 23:40:25 by waziz            ###   ########.fr       */
+/*   Updated: 2023/12/13 18:24:01 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int		i;
+	int				i;
 	unsigned char	*str;
 
 	str = (unsigned char *) s;

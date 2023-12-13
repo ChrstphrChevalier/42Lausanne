@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 22:08:57 by waziz             #+#    #+#             */
-/*   Updated: 2023/11/08 22:09:00 by waziz            ###   ########.fr       */
+/*   Updated: 2023/12/13 18:26:44 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_conv_adress(uintptr_t n)
 {
-	int	count;
+	int		count;
 	char	*hex;
 
 	count = 0;

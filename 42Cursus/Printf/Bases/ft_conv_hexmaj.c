@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:08:32 by waziz             #+#    #+#             */
-/*   Updated: 2023/11/02 14:08:35 by waziz            ###   ########.fr       */
+/*   Updated: 2023/12/13 18:27:09 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_conv_hexmaj(unsigned int n)
 {
-	int	count;
+	int		count;
 	char	*hexmaj;
 
 	count = 0;

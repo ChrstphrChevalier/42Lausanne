@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:37:26 by waziz             #+#    #+#             */
-/*   Updated: 2023/11/03 22:37:28 by waziz            ###   ########.fr       */
+/*   Updated: 2023/12/13 18:24:57 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ static int	ft_check_args(const char *str, va_list a, int i)
 int	ft_printf(const char *input, ...)
 {
 	va_list	args;
-	int	i;
-	int	count;
+	int		i;
+	int		count;
 
 	va_start(args, input);
 	i = 0;
