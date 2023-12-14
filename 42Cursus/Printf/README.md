@@ -14,7 +14,7 @@
 
 ##### <p align="center"> *Questions asked in defense :* </p>
 
-##### <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/c8936a2b-85a0-48aa-93a6-133b505646ad) </p>
+##### <p align="center"> - [RATING 42](https://github.com/rphlr/42-Evals/blob/main/Cursus/Ft_printf/img/all.jpg) - </p>
 
 # <p align="center"> - Result - </p>
 
