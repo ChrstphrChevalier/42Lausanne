@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 10:58:04 by waziz             #+#    #+#             */
-/*   Updated: 2023/12/13 14:08:00 by waziz            ###   ########.fr       */
+/*   Created: 2023/12/14 13:22:54 by waziz             #+#    #+#             */
+/*   Updated: 2023/12/14 13:23:49 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 # include "ft_printf/ft_printf.h"
 # include "libft/libft.h"
 
-typedef struct s_list2
+typedef struct sigbit
 {
 	int		bit;
 	int		pid;
-	int		trigger;
+	int		received_pid;
 	char	c;
-}				t_list2;
+}				t_sigbits;
 
 #endif
+
