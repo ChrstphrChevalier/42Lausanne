@@ -4,6 +4,10 @@
 
 ### <p align="center"> *Minitalk is a network programming project where we need to implement a simplified communication protocol between two processes. It is based on the concept of communication through UNIX-type signals. We need to create a transmitter and receiver that can reliably exchange short messages.* </p>
 
+### <p align="center"> !! **WARNING** !! </p>
+
+### <p align="center"> - The project is subject to the rules of norminette ! - </p>
+
 # <p align="center"> - Evals - </p>
 
 ##### <p align="center"> *Questions asked in defense :* </p>
