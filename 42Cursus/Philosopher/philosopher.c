@@ -59,6 +59,10 @@ static int	init_sem(t_sem_grp *sem_grps, int num_philosophers)
 	int	size_grp;
 
 	size_grp = (num_philosophers / 2) + (num_philosophers % 2);
+	if (size_grp < 1){
+		ft_printf("Error : Nbr size_grp invalid.\n");
+		return (0);
+	}
 	sem_grps->even_grp = sem_open("/even_sem", O_CREAT, 0644, size_grp);
 	if (sem_grps->even_grp == SEM_FAILED){
 		ft_printf("Failed to initialized even semaphore.\n");
@@ -85,12 +89,14 @@ static void	destroy_sem(t_sem_grp *sem_grps)
 
 int	main(int ac, char **av)
 {
+	struct timeval	start_time;
 	t_table		*table;
 	t_sem_grp	sem_grps;
-	int		num_philosophers;
+	long		num_philosophers;
 
-	if (ac != 2){
-		ft_printf("Error Usage : <Exe> <Numbers_of_philosophe> !\n");
+	gettimeofday(&start_time, NULL);
+	if (ac != 6){
+		ft_printf("Error Usage : ./Exe Nbr_philo T_dead T_eat T_sleep Max_meals.\n");
 		return (0);
 	}
 	num_philosophers = ft_atoi(av[1]);
@@ -100,7 +106,8 @@ int	main(int ac, char **av)
 	}
 	if (!init_sem(&sem_grps, num_philosophers))
 		return (0);
-	table = init_table(num_philosophers, &sem_grps);
+	table = init_table(num_philosophers, &sem_grps, &start_time,
+		ft_atoi(av[2]), ft_atoi(av[3]), ft_atoi(av[4]), ft_atoi(av[5]));
 	if (philosopher_by_thread(table) != 1 || check_state(table))
 		free_table(table, num_philosophers);
 	destroy_sem(&sem_grps);

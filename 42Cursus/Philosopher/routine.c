@@ -14,30 +14,47 @@
 
 static void	to_think(t_philosopher *philosophe, pthread_mutex_t *p)
 {
+	struct timeval		c_time;
+	long long		current;
+
+	gettimeofday(&c_time, NULL);
+	current = ((c_time.tv_sec - philosophe->start_time->tv_sec) * 1000000L)
+		+ (c_time.tv_usec - philosophe->start_time->tv_usec);
 	pthread_mutex_lock(p);
-	ft_printf("The philosophers %d thinks.\n", philosophe->ID);
+	ft_printf("%d ms, The philosophers %d thinks.\n", current, philosophe->ID);
 	pthread_mutex_unlock(p);
 	philosophe->state = THINKING;
-	usleep (2000);
 }
 
 static void	to_eat(t_philosopher *philosophe, pthread_mutex_t *p)
 {
+	struct timeval		c_time;
+	long long		current;
+
+	gettimeofday(&c_time, NULL);
+	current = ((c_time.tv_sec - philosophe->start_time->tv_sec) * 1000000L)
+		+ (c_time.tv_usec - philosophe->start_time->tv_usec);
 	pthread_mutex_lock(p);
-	ft_printf("The philosophers %d begins to eat.\n", philosophe->ID);
+	ft_printf("%d ms, The philosophers %d begins to eat.\n", current, philosophe->ID);
 	pthread_mutex_unlock(p);
 	philosophe->state = EATING;
 	philosophe->meals_eaten++;
-	usleep (3000);
+	ft_usleep(philosophe->eat_time);
 }
 
 static void	to_sleep(t_philosopher *philosophe, pthread_mutex_t *p)
 {
+	struct timeval		c_time;
+	long long		current;
+
+	gettimeofday(&c_time, NULL);
+	current = ((c_time.tv_sec - philosophe->start_time->tv_sec) * 1000000L)
+		+ (c_time.tv_usec - philosophe->start_time->tv_usec);
 	pthread_mutex_lock(p);
-	ft_printf("The philosophers %d sleeps.\n", philosophe->ID);
+	ft_printf("%d ms, The philosophers %d sleeps.\n", current, philosophe->ID);
 	pthread_mutex_unlock(p);
 	philosophe->state = SLEEPING;
-	usleep (1000);
+	ft_usleep(philosophe->sleep_time);
 }
 
 static int	check_death(t_philosopher *ph, struct timeval *a,

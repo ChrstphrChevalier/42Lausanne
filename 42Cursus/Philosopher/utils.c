@@ -58,11 +58,11 @@ int	ft_error(int error, pthread_t *threads)
 	return (0);
 }
 
-int	ft_atoi(char *s)
+long	ft_atoi(char *s)
 {
 	int	i;
-	int	signe;
-	int	resultat;
+	long	signe;
+	long	resultat;
 
 	i = 0;
 	signe = 1;

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putnbr(long n)
 {
 	int	count;
 

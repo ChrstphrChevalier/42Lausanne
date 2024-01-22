@@ -46,10 +46,14 @@ typedef struct s_philosopher
 	pthread_mutex_t	*r_fork;
 	int		check_forks;
 	int		meals_eaten;
-	int		max_meals;
+	int		check_eaten;
+	long		max_meals;
 	long		death_time_limit;
+	long		eat_time;
+	long		sleep_time;
 	int		num_philo;
 	t_sem_grp	*my_grp;
+	struct timeval	*start_time;
 	struct	s_philosopher	*next;
 	struct	s_philosopher	*prev;
 }	t_philosopher;
@@ -61,13 +65,15 @@ typedef struct s_table
 	int		num_philosophers;
 }	t_table;
 
-t_table		*init_table(int num_philosophers, t_sem_grp *sem_grps);
+t_table		*init_table(int num_philosophers, t_sem_grp *sem_grps, struct timeval *st,
+		long t_dead, long t_eat, long t_sleep, long max_m);
 void		free_table(t_table *table, int num_philosophers);
 void		*routine_philosopher(void *philosophe_ptr);
 int		ft_error(int error, pthread_t *threads);
-int		ft_atoi(char *s);
+long		ft_atoi(char *s);
 pthread_mutex_t	*get_printer_mutex(void);
 void		waiting_sem(t_philosopher *philosophe);
 void		posting_sem(t_philosopher *philosophe);
+void		ft_usleep(long int ms);
 
 #endif

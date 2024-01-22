@@ -24,7 +24,7 @@ static int	ft_check_args(const char *str, va_list a, int i)
 	else if (str[i] == 'p')
 		count += ft_print_p((uintptr_t) va_arg(a, uintptr_t));
 	else if (str[i] == 'd' || str[i] == 'i')
-		count += ft_print_d((int) va_arg(a, int));
+		count += ft_print_d((long) va_arg(a, long));
 	else if (str[i] == 'u')
 		count += ft_print_u((unsigned int) va_arg(a, unsigned int));
 	else if (str[i] == 'x')

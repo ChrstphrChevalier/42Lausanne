@@ -21,11 +21,11 @@ int	ft_printf(const char *input, ...);
 int	ft_conv_hexmaj(unsigned int n);
 int	ft_conv_hexmin(unsigned int n);
 int	ft_conv_adress(uintptr_t n);
-int	ft_putnbr(int n);
+int	ft_putnbr(long n);
 int	ft_putunbr(unsigned int un);
 
 int	ft_print_c(char c);
-int	ft_print_d(int n);
+int	ft_print_d(long n);
 int	ft_print_p(uintptr_t adress);
 int	ft_print_s(char *s);
 int	ft_print_u(unsigned int n);
