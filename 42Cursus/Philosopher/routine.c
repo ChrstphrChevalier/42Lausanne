@@ -62,12 +62,18 @@ static int	check_death(t_philosopher *ph, struct timeval *a,
 {
 	long	time;
 
-	time = (c->tv_sec * 1000000L + c->tv_usec)
-		- (a->tv_sec * 1000000L + a->tv_usec);
-	if (time > ph->death_time_limit * 1000000L)
-	{
+	time = 0;
+	if (ph->meals_eaten == 0){
+		time = (c->tv_sec * 1000000L + c->tv_usec)
+			- (ph->start_time->tv_sec * 1000000L + ph->start_time->tv_usec);
+	}
+	else if (ph->meals_eaten > 0){
+		time = (c->tv_sec * 1000000L + c->tv_usec)
+			- (a->tv_sec * 1000000L + a->tv_usec);
+	}
+	if (time > ph->death_time_limit * 1000000L || ph->num_philo == 1){
 		pthread_mutex_lock(p);
-		ft_printf("The philosophers %d is dead.\n", ph->ID);
+		ft_printf("%d ms, The philosophers %d is dead.\n", time, ph->ID);
 		pthread_mutex_unlock(p);
 		ph->state = DEAD;
 		return (1);
@@ -84,11 +90,10 @@ void	*routine_philosopher(void *philosophe_ptr)
 
 	philosophe = (t_philosopher *)philosophe_ptr;
 	printer = get_printer_mutex();
-	while (philosophe->meals_eaten <= philosophe->max_meals){
+	while (philosophe->meals_eaten < philosophe->max_meals){
 		to_think(philosophe, printer);
 		gettimeofday(&current_time, NULL);
-		if (philosophe->meals_eaten > 0 &&
-			check_death(philosophe, &after_eaten, &current_time, printer))
+		if (check_death(philosophe, &after_eaten, &current_time, printer))
 			break ;
 		waiting_sem(philosophe);
 		pthread_mutex_lock(philosophe->l_fork);

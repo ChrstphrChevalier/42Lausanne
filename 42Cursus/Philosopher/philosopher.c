@@ -45,8 +45,10 @@ static int	check_state(t_table *table)
 	current_phil = table->philosophers;
 	while (current_phil != NULL
 		&& (current_phil->meals_eaten < current_phil->max_meals)){
-		if (current_phil->state == DEAD
-			|| current_phil->meals_eaten == current_phil->max_meals)
+		if (current_phil->state == DEAD)
+			return (1);
+		else if (current_phil->meals_eaten == current_phil->max_meals
+			&& current_phil->ID == table->num_philosophers)
 			return (1);
 		current_phil = current_phil->next;
 		usleep (1000);

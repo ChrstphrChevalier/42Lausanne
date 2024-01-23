@@ -26,7 +26,8 @@ void	waiting_sem(t_philosopher *philosophe)
 		if (sem_wait(philosophe->my_grp->even_grp) == -1)
 			ft_printf("Error : sem_wait->even_grp.\n");
 	}
-	if (philosophe->my_grp->eaten == 0 && philosophe->num_philo > 1){
+	if (philosophe->ID % 2 != 0 && philosophe->my_grp->eaten == 0
+		&& philosophe->num_philo > 1){
 		if (sem_wait(philosophe->my_grp->odd_grp) == -1)
 			ft_printf("Error : sem_wait->odd_grp.\n");
 	}
