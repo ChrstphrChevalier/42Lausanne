@@ -36,6 +36,7 @@ typedef struct s_sem_grp
 	sem_t	*even_grp;
 	sem_t	*odd_grp;
 	int	eaten;
+	int	philo_passed;
 }	t_sem_grp;
 
 typedef struct s_philosopher

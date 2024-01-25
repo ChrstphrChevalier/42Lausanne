@@ -58,19 +58,21 @@ static int	check_state(t_table *table)
 
 static int	init_sem(t_sem_grp *sem_grps, int num_philosophers)
 {
-	int	size_grp;
+	int	size_pair;
+	int	size_impair;
 
-	size_grp = (num_philosophers / 2) + (num_philosophers % 2);
-	if (size_grp < 1){
+	size_pair = (num_philosophers / 2) + 1;
+	size_impair = num_philosophers / 2;
+	if (size_pair < 1 || size_impair < 1){
 		ft_printf("Error : Nbr size_grp invalid.\n");
 		return (0);
 	}
-	sem_grps->even_grp = sem_open("/even_sem", O_CREAT, 0644, size_grp);
+	sem_grps->even_grp = sem_open("/even_sem", O_CREAT, 0644, size_pair);
 	if (sem_grps->even_grp == SEM_FAILED){
 		ft_printf("Failed to initialized even semaphore.\n");
 		return (0);
 	}
-	sem_grps->odd_grp = sem_open("/odd_sem", O_CREAT, 0644, size_grp);
+	sem_grps->odd_grp = sem_open("/odd_sem", O_CREAT, 0644, size_impair);
 	if (sem_grps->odd_grp == SEM_FAILED){
 		ft_printf("Failed to initialized odd semaphore.\n");
 		sem_close(sem_grps->even_grp);
@@ -78,6 +80,7 @@ static int	init_sem(t_sem_grp *sem_grps, int num_philosophers)
 		return (0);
 	}
 	sem_grps->eaten = 0;
+	sem_grps->philo_passed = 0;
 	return (1);
 }
 
