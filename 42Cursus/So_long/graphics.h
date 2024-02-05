@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   graphics.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cedmulle <cedmulle@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 10:52:53 by waziz             #+#    #+#             */
-/*   Updated: 2024/01/08 14:17:12 by cedmulle         ###   ########.fr       */
+/*   Created: 2024/01/31 18:19:05 by waziz             #+#    #+#             */
+/*   Updated: 2024/01/31 19:36:15 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@
 # define KEY_RIGHT 124
 # define KEY_ESC 53
 
-int	graphics_init(t_game *info);
-int	load_images(t_game *info);
+int		graphics_init(t_game *info);
+int		load_images(t_game *info);
 void	draw_map(t_game *info);
 void	clean_up(t_game *info);
-int	key_press_callback(int keycode, t_game *info);
-int	win_close(t_game *info);
+int		key_press_callback(int keycode, t_game *info);
+int		win_close(t_game *info);
 void	display_move(t_game *info);
 
 #endif

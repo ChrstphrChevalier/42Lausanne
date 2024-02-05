@@ -2,17 +2,19 @@
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 # Header files directory
 HEADER = philosopher.h
 
 # Source files and object files for Philosopher project
-SRC = init.c philosopher.c routine_utils.c routine.c utils.c
+SRC = init.c philosopher.c ft_usleep.c routine_utils.c routine.c routine_supervisor.c threads.c utils.c data_race.c
 OBJ = $(SRC:.c=.o)
 
 # Name of the final executable
-NAME = philosopher
+NAME = philo
+
+all: $(NAME)
 
 # Rule for making the final executable
 $(NAME): $(OBJ) Printf/libftprintf.a

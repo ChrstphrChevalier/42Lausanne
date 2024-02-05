@@ -6,104 +6,91 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 12:31:17 by waziz             #+#    #+#             */
-/*   Updated: 2024/01/20 12:31:20 by waziz            ###   ########.fr       */
+/*   Updated: 2024/02/04 12:59:01 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosopher.h"
 
-static void	to_think(t_philosopher *philosophe, pthread_mutex_t *p)
+static int	to_think(t_philosopher *p)
 {
-	struct timeval		c_time;
-	long long		current;
+	long long		ct;
 
-	gettimeofday(&c_time, NULL);
-	current = ((c_time.tv_sec - philosophe->start_time->tv_sec) * 1000000L)
-		+ (c_time.tv_usec - philosophe->start_time->tv_usec);
-	pthread_mutex_lock(p);
-	ft_printf("%d ms, The philosophers %d thinks.\n", current, philosophe->ID);
-	pthread_mutex_unlock(p);
-	philosophe->state = THINKING;
-}
-
-static void	to_eat(t_philosopher *philosophe, pthread_mutex_t *p)
-{
-	struct timeval		c_time;
-	long long		current;
-
-	gettimeofday(&c_time, NULL);
-	current = ((c_time.tv_sec - philosophe->start_time->tv_sec) * 1000000L)
-		+ (c_time.tv_usec - philosophe->start_time->tv_usec);
-	pthread_mutex_lock(p);
-	ft_printf("%d ms, The philosophers %d begins to eat.\n", current, philosophe->ID);
-	pthread_mutex_unlock(p);
-	philosophe->state = EATING;
-	philosophe->meals_eaten++;
-	ft_usleep(philosophe->eat_time);
-}
-
-static void	to_sleep(t_philosopher *philosophe, pthread_mutex_t *p)
-{
-	struct timeval		c_time;
-	long long		current;
-
-	gettimeofday(&c_time, NULL);
-	current = ((c_time.tv_sec - philosophe->start_time->tv_sec) * 1000000L)
-		+ (c_time.tv_usec - philosophe->start_time->tv_usec);
-	pthread_mutex_lock(p);
-	ft_printf("%d ms, The philosophers %d sleeps.\n", current, philosophe->ID);
-	pthread_mutex_unlock(p);
-	philosophe->state = SLEEPING;
-	ft_usleep(philosophe->sleep_time);
-}
-
-static int	check_death(t_philosopher *ph, struct timeval *a,
-		struct timeval *c, pthread_mutex_t *p)
-{
-	long	time;
-
-	time = 0;
-	if (ph->meals_eaten == 0){
-		time = (c->tv_sec * 1000000L + c->tv_usec)
-			- (ph->start_time->tv_sec * 1000000L + ph->start_time->tv_usec);
-	}
-	else if (ph->meals_eaten > 0){
-		time = (c->tv_sec * 1000000L + c->tv_usec)
-			- (a->tv_sec * 1000000L + a->tv_usec);
-	}
-	if (time > ph->death_time_limit * 1000000L || ph->num_philo == 1){
-		pthread_mutex_lock(p);
-		ft_printf("%d ms, The philosophers %d is dead.\n", time, ph->ID);
-		pthread_mutex_unlock(p);
-		ph->state = DEAD;
+	ct = timestamp() - p->check->st;
+	pthread_mutex_lock(p->check->mut_print);
+	ft_printf("%d ms, The philosophers %d is thinking.\n", ct, p->id + 1);
+	p->state = THINKING;
+	pthread_mutex_unlock(p->check->mut_print);
+	pthread_mutex_lock(p->check->mut_print);
+	if (p->check->philo_numbers == 1)
+	{
+		pthread_mutex_unlock(p->check->mut_print);
 		return (1);
 	}
+	pthread_mutex_unlock(p->check->mut_print);
 	return (0);
+}
+
+static void	to_eat(t_philosopher *p)
+{
+	long long		ct;
+
+	ct = timestamp() - p->check->st;
+	pthread_mutex_lock(p->check->mut_print);
+	ft_printf("%d ms, The philosopher %d has taken a r_fork\n", ct, p->id + 1);
+	pthread_mutex_unlock(p->check->mut_print);
+	pthread_mutex_lock(p->check->mut_print);
+	p->state = EATING;
+	p->a = timestamp();
+	p->meals_eaten++;
+	ft_printf("%d ms, The philosophers %d is eating.\n", ct, p->id + 1);
+	pthread_mutex_unlock(p->check->mut_print);
+	ft_usleep(p->check->eat_time);
+	pthread_mutex_unlock(p->l_fork);
+	pthread_mutex_unlock(p->r_fork);
+}
+
+static void	to_sleep(t_philosopher *p)
+{
+	long long			ct;
+
+	ct = timestamp() - p->check->st;
+	pthread_mutex_lock(p->check->mut_print);
+	ft_printf("%d ms, The philosophers %d is sleeping.\n", ct, p->id + 1);
+	p->state = SLEEPING;
+	pthread_mutex_unlock(p->check->mut_print);
+	ft_usleep(p->check->sleep_time);
+	pthread_mutex_lock(p->check->mut_print);
+	if (p->meals_eaten == p->check->max_meals)
+		p->check->finish++;
+	pthread_mutex_unlock(p->check->mut_print);
 }
 
 void	*routine_philosopher(void *philosophe_ptr)
 {
-	struct timeval	current_time;
-	struct timeval	after_eaten;
-	t_philosopher	*philosophe;
-	pthread_mutex_t	*printer;
+	t_philosopher	*p;
 
-	philosophe = (t_philosopher *)philosophe_ptr;
-	printer = get_printer_mutex();
-	while (philosophe->meals_eaten < philosophe->max_meals){
-		to_think(philosophe, printer);
-		gettimeofday(&current_time, NULL);
-		if (check_death(philosophe, &after_eaten, &current_time, printer))
+	p = (t_philosopher *)philosophe_ptr;
+	if (p->check_grp == 1)
+		usleep(1500);
+	while (p->meals_eaten < p->check->max_meals)
+	{
+		if (death_philo(p))
 			break ;
-		waiting_sem(philosophe);
-		pthread_mutex_lock(philosophe->l_fork);
-		pthread_mutex_lock(philosophe->r_fork);
-		to_eat(philosophe, printer);
-		gettimeofday(&after_eaten, NULL);
-		pthread_mutex_unlock(philosophe->l_fork);
-		pthread_mutex_unlock(philosophe->r_fork);
-		posting_sem(philosophe);
-		to_sleep(philosophe, printer);
+		if (to_think(p))
+			break ;
+		if (death_philo(p))
+			break ;
+		waiting_eat(p);
+		if (death_philo(p))
+			break ;
+		to_eat(p);
+		if (death_philo(p))
+			break ;
+		posting_eat(p);
+		if (death_philo(p))
+			break ;
+		to_sleep(p);
 	}
 	return (NULL);
 }

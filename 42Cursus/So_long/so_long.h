@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:11:09 by waziz             #+#    #+#             */
-/*   Updated: 2023/12/20 15:11:18 by waziz            ###   ########.fr       */
+/*   Updated: 2024/01/31 19:45:05 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,38 +28,40 @@ typedef struct gaming
 	char	**map;
 	char	**map_copy;
 	char	*name_map;
-	int	fd;
-	int	x;
-	int	y;
-	int	coin;
-	int	max_coin;
-	int	start[2];
-	int	end[2];
+	int		fd;
+	int		x;
+	int		y;
+	int		coin;
+	int		max_coin;
+	int		start[2];
+	int		end[2];
 	void	*mlx;
 	void	*win;
-	int	height;
-	int	width;
+	int		height;
+	int		width;
 	void	*wall;
 	void	*floor;
 	void	*player;
 	void	*piece;
 	void	*wicked;
 	void	*exit;
-	int	game_state;
-	int	move_count;
-	int	coin_count;
-	int	px;
-	int	py;
-	int	game_over;
-	int	enemy_visible;
-	int	map_redrawn;
-	int	enemy_direction;
-	int	end_game;
+	int		game_state;
+	int		move_count;
+	int		coin_count;
+	int		px;
+	int		py;
+	int		game_over;
+	int		enemy_visible;
+	int		map_redrawn;
+	int		enemy_direction;
+	int		end_game;
 }	t_game;
 
-int	parse_map(t_game *info);
-int	ft_error(int error);
-int	ft_gerror(int gerror, t_game *info);
-int	ft_free_maps(t_game *info);
+int		parse_map(t_game *info);
+int		ft_error(int error);
+int		ft_gerror(int gerror, t_game *info);
+int		ft_free_maps(t_game *info);
+void	save_mp(t_game *info, int new_x, int new_y);
+void	save_dg(t_game *info);
 
 #endif

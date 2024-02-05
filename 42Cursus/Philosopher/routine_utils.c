@@ -6,74 +6,82 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 12:31:31 by waziz             #+#    #+#             */
-/*   Updated: 2024/01/20 12:31:33 by waziz            ###   ########.fr       */
+/*   Updated: 2024/02/05 00:45:56 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosopher.h"
 
-pthread_mutex_t	*get_printer_mutex(void)
+static void	weat(t_philosopher *p)
 {
-	static pthread_mutex_t	printer = PTHREAD_MUTEX_INITIALIZER;
-
-	return (&printer);
-}
-
-void	waiting_sem(t_philosopher *philosophe)
-{
-	if (philosophe->ID % 2 == 0 && philosophe->my_grp->eaten == 1
-		&& philosophe->num_philo > 1){
-		if (sem_wait(philosophe->my_grp->even_grp) == -1)
-			ft_printf("Error : sem_wait->even_grp.\n");
-	}
-	if (philosophe->ID % 2 != 0 && philosophe->my_grp->eaten == 0
-		&& philosophe->num_philo > 1){
-		if (sem_wait(philosophe->my_grp->odd_grp) == -1)
-			ft_printf("Error : sem_wait->odd_grp.\n");
-	}
-}
-
-void	posting_sem(t_philosopher *philosophe)
-{
-	philosophe->my_grp->philo_passed++;
-	while (philosophe->my_grp->eaten == 1 && philosophe->num_philo > 1){
-		if (philosophe->my_grp->philo_passed == (philosophe->num_philo + 1) / 2){
-			philosophe->my_grp->eaten = 0;
-			philosophe->my_grp->philo_passed = 0;
-			sem_post(philosophe->my_grp->even_grp);
-		}
-		else if (philosophe->my_grp->eaten == 0
-				|| philosophe->meals_eaten == philosophe->max_meals)
-			break ;
-	}
-	while (philosophe->my_grp->eaten == 0 && philosophe->num_philo > 1){
-		if (philosophe->my_grp->philo_passed == (philosophe->num_philo) / 2){
-			philosophe->my_grp->eaten = 1;
-			philosophe->my_grp->philo_passed = 0;
-			sem_post(philosophe->my_grp->odd_grp);
-		}
-		else if (philosophe->my_grp->eaten == 1
-				|| philosophe->meals_eaten == philosophe->max_meals)
-			break ;
-	}
-}
-
-static long long	timestamp(void)
-{
-	struct timeval    tv;
-
-	gettimeofday(&tv, NULL);
-	return (tv.tv_sec * 1000 + tv.tv_usec / 1000);
-}
-
-void	ft_usleep(long int ms)
-{
-	long int	t;
-	t = timestamp();
-	while (1)
+	while (p->check_grp == 0 && check_eaten(p, 1)
+		&& p->check->philo_numbers > 1)
 	{
-		if (timestamp() - t >= ms)
+		if (p->meals_eaten == p->check->max_meals - 1
+			|| death_philo(p))
 			break ;
-		usleep(50);
+		usleep(15);
 	}
+	while (p->check_grp == 1 && check_eaten(p, 0)
+		&& p->check->philo_numbers > 1)
+	{
+		if (p->meals_eaten == p->check->max_meals - 1
+			|| death_philo(p))
+			break ;
+		usleep(15);
+	}
+}
+
+void	waiting_eat(t_philosopher *p)
+{
+	long long		ct;
+
+	ct = timestamp() - p->check->st;
+	weat(p);
+	if (!death_philo(p))
+	{
+		pthread_mutex_lock(p->l_fork);
+		pthread_mutex_lock(p->check->mut_print);
+		ft_printf("%d ms, The philosopher %d has taken a l_fork\n",
+			ct, p->id + 1);
+		pthread_mutex_unlock(p->check->mut_print);
+		pthread_mutex_lock(p->r_fork);
+	}
+}
+
+void	posting_eat(t_philosopher *p)
+{
+	pthread_mutex_lock(p->check->mut_print);
+	p->check->passed++;
+	pthread_mutex_unlock(p->check->mut_print);
+	while (p->check_grp == 1
+		&& check_eaten(p, 1) && p->check->philo_numbers > 1)
+	{
+		if (check_passed_one(p))
+			break ;
+		else if (check_eaten(p, 0)
+			|| check_max_meals(p))
+			break ;
+	}
+	while (p->check_grp == 0
+		&& check_eaten(p, 0) && p->check->philo_numbers > 1)
+	{
+		if (check_passed_two(p))
+			break ;
+		else if (check_eaten(p, 1)
+			|| check_max_meals(p))
+			break ;
+	}
+}
+
+int	death_philo(t_philosopher *p)
+{
+	pthread_mutex_lock(p->check->mut_print);
+	if (p->check->philo_dead == 1)
+	{
+		pthread_mutex_unlock(p->check->mut_print);
+		return (1);
+	}
+	pthread_mutex_unlock(p->check->mut_print);
+	return (0);
 }

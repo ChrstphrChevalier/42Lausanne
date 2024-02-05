@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 17:10:44 by waziz             #+#    #+#             */
-/*   Updated: 2023/12/20 17:10:49 by waziz            ###   ########.fr       */
+/*   Updated: 2024/01/31 19:43:24 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,24 +38,20 @@ static void	draw_game(t_game *info)
 {
 	if (info->end_game)
 		mlx_string_put(info->mlx, info->win, 100, 100, 0xFFFFFF, "WINNER :)");
-	else if (info->game_over){
-		if (!info->map_redrawn){
+	else if (info->game_over)
+	{
+		if (!info->map_redrawn)
+		{
 			info->enemy_visible = 1;
 			info->map[info->py][info->px] = 'W';
-			if (info->enemy_direction == 0)
-				info->map[info->py + 1][info->px] = 'P';
-			else if (info->enemy_direction == 1)
-				info->map[info->py][info->px + 1] = 'P';
-			else if (info->enemy_direction == 2)
-				info->map[info->py - 1][info->px] = 'P';
-			else if (info->enemy_direction == 3)
-				info->map[info->py][info->px - 1] = 'P';
+			save_dg(info);
 			draw_map(info);
 			info->map_redrawn = 1;
 		}
 		mlx_string_put(info->mlx, info->win, 100, 100, 0xFFFFFF, "GAME OVER!");
 	}
-	else {
+	else
+	{
 		display_move(info);
 		draw_map(info);
 	}

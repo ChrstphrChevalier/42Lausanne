@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cedmulle <cedmulle@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/20 15:59:50 by waziz             #+#    #+#             */
-/*   Updated: 2024/01/08 14:14:03 by cedmulle         ###   ########.fr       */
+/*   Created: 2024/01/31 17:13:29 by waziz             #+#    #+#             */
+/*   Updated: 2024/01/31 19:36:33 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	check_size(t_game *info)
 {
 	char	*line;
-	int	i;
+	int		i;
 
 	line = get_next_line(info->fd);
 	while (line)
@@ -24,16 +24,17 @@ static int	check_size(t_game *info)
 		while (line[i])
 			i++;
 		if (info->x != i && info->y != 0)
+		{
+			free(line);
 			return (ft_error(4));
+		}
 		info->x = i;
 		info->y++;
 		free(line);
 		line = get_next_line(info->fd);
 	}
-	if (info->x < 3 || info->y < 3)
+	if (info->x < 3 || info->y < 3 || (info->x == info->y))
 		return (ft_error(5));
-	if (info->x == info->y)
-		return (ft_error(4));
 	close(info->fd);
 	info->fd = open(info->name_map, O_RDONLY);
 	return (1);

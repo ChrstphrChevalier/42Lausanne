@@ -6,7 +6,7 @@
 /*   By: waziz <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 10:57:31 by waziz             #+#    #+#             */
-/*   Updated: 2023/12/21 10:57:33 by waziz            ###   ########.fr       */
+/*   Updated: 2024/01/31 19:35:37 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,8 @@ static void	*get_image(t_game *info, char map_xy)
 
 void	draw_map(t_game *info)
 {
-	int	y;
-	int	x;
+	int		y;
+	int		x;
 	void	*img_to_draw;
 
 	y = 0;
