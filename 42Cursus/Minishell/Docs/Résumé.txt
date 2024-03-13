@@ -1,0 +1,85 @@
+Résumé du sujet du projet Minishell :
+
+Partie obligatoire :
+
+1. Affichage d'un prompt : 
+Afficher un prompt lors de l'attente d'une nouvelle commande.
+
+2. Historique des commandes : 
+Implémenter un historique fonctionnel pour enregistrer les commandes précédemment saisies.
+
+3. Recherche et exécution d'exécutables :
+Rechercher et lancer le bon exécutable en se basant sur la variable d'environnement PATH, 
+ou en utilisant un chemin relatif ou absolu.
+
+4. Gestion des signaux :
+Utiliser au plus une variable globale pour indiquer la réception d'un signal, afin d'éviter 
+que le gestionnaire de signal n'accède aux structures de données principales.
+
+5. Interprétation des commandes :
+Ne pas interpréter les guillemets non fermés ou les caractères spéciaux non nécessaires tels 
+que \ (backslash) ou ; (point-virgule).
+
+6. Gestion des quotes :
+Gérer les guillemets simples ('), qui empêchent l'interprétation des métacaractères dans 
+la séquence entre guillemets.
+
+7. Gestion des double quotes : 
+Gérer les guillemets doubles ("), qui empêchent l'interprétation des métacaractères dans la 
+séquence entre guillemets, sauf pour $ (dollar sign).
+
+8. Implémentation des redirections :
+   - < : Redirection de l'entrée.
+   - > : Redirection de la sortie.
+   - << : Délimitateur pour la redirection de l'entrée.
+   - >> : Redirection de la sortie en mode append.
+
+9. Implémentation des pipes : 
+Utiliser le caractère | pour connecter la sortie de chaque commande dans la pipeline à l'entrée 
+de la commande suivante via un tube (pipe).
+
+10. Gestion des variables d'environnement :
+Prendre en charge les variables d'environnement ($ suivie d'une séquence de caractères) qui doivent 
+se développer pour afficher leurs valeurs.
+
+11. Gestion de $? :
+Prendre en charge la variable d'environnement $? qui doit se développer pour 
+afficher le statut de sortie de la dernière pipeline en avant-plan exécutée.
+
+12. Gestion des signaux : Gérer les signaux ctrl-C, ctrl-D et ctrl-\ comme dans bash.
+    - ctrl-C : Affiche un nouveau prompt sur une nouvelle ligne.
+    - ctrl-D : Quitte le shell.
+    - ctrl-\ : Ne rien faire.
+
+13. Implémentation des builtins :
+    - echo avec l'option -n
+    - cd avec uniquement un chemin relatif ou absolu
+    - pwd sans options
+    - export sans options
+    - unset sans options
+    - env sans options ni arguments
+    - exit sans options
+
+Partie bonus :
+
+Si et seulement si la partie obligatoire est parfaite, le programme doit également implémenter :
+
+1. Opérateurs logiques && et || : 
+Implémenter les opérateurs logiques && et || avec des parenthèses pour les priorités.
+
+2. Gestion des wildcards :
+Les jokers * devraient fonctionner pour le répertoire de travail actuel.
+
+Fonctions autorisées :
+- readline, rl_clear_history, rl_on_new_line,
+rl_replace_line, rl_redisplay, add_history,
+printf, malloc, free, write, access, open, read,
+close, fork, wait, waitpid, wait3, wait4, signal,
+sigaction, sigemptyset, sigaddset, kill, exit,
+getcwd, chdir, stat, lstat, fstat, unlink, execve,
+dup, dup2, pipe, opendir, readdir, closedir,
+strerror, perror, isatty, ttyname, ttyslot, ioctl,
+getenv, tcsetattr, tcgetattr, tgetent, tgetflag,
+tgetnum, tgetstr, tgoto, tputs
+
+- Libft
