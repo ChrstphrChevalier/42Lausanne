@@ -6,7 +6,7 @@
 /*   By: waziz <waziz@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:20:02 by waziz             #+#    #+#             */
-/*   Updated: 2024/03/13 10:15:12 by waziz            ###   ########.fr       */
+/*   Updated: 2024/03/15 19:17:40 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,13 @@ struct t_export *init(t_export *alloctrack);
 // wildcards
 char            **all_files();
 char            **filter_a(char *input);
+void            erase_quote_a(char *input, char *tmp);
+void            skip_quote_a(char *input, int skip_a, int quote);
 char            **filter_b(char *input);
+void            erase_quote_b(char *input, char *tmp);
+void            skip_quote_b(char *input, int skip_b, int quote);
 char            **filter_more(char *input);
+char            **init_search(char *tmp);
 char            **wilcards(char *input);
 
 // free
@@ -97,5 +102,8 @@ void            squote_parse(char *arg, char **arg_more, int t);
 // parsing argument (!! LEXING !!)
 char            *convert_n_concat(char **arg_more);
 void            replace_argument(t_token *tokens);
+
+// utils
+int             tablen(char **tab);
 
 #endif

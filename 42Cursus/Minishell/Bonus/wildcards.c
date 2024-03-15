@@ -6,7 +6,7 @@
 /*   By: waziz <waziz@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:33:12 by waziz             #+#    #+#             */
-/*   Updated: 2024/03/13 12:04:13 by waziz            ###   ########.fr       */
+/*   Updated: 2024/03/15 10:18:09 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ static char **filter_ab(char *input)
     char    **fb;
     int     i;
     int     j;
+    int     quote;
 
     i = 0;
-    j = 0;
     filter_ab = filter_a(input);
     fb = filter_b(input);
-    while (input[j] != '*')
-        j++;
+    skip_quote_b(input, j, quote);
+    j -= quote;
     while (filter_ab[i])
     {
         if (ft_strncmp(fb[0], filter_ab[i], j) == 0)
@@ -54,8 +54,7 @@ static char    **filter_simple(char *input)
     i = 0;
     j = 0;
     k = 0;
-    while (input[i] != '*')
-        i++;
+    skip_quote_bmult(input, i);
     k = i;
     while (input[k] == '*')
         k++;
@@ -76,20 +75,13 @@ static char    **filter_simple(char *input)
 static int  init_check(char *input)
 {
     int i;
+    int j;
     int check;
     
     i = 0;
-    check = 1;
-    while (input[i] != '*')
-        i++;
-    while (input[i] == '*')
-        i++;
-    while (input[i])
-    {
-        if (input[i] == '*')
-            check++;
-        i++;
-    }
+    skip_quote_bmult(input, i);
+    skip_quote_amult(input, j, 0);
+    check = ft_strlen(input) - i - j;
     return (check);
 }
 
@@ -103,7 +95,7 @@ char    **wilcards(char *input)
 
     i = -1;
     check = init_check(input);
-    if (check > 1)
+    if (check > 0)
         filter = filter_more(input);
     else
         filter = filter_simple(input);

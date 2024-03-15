@@ -6,7 +6,7 @@
 /*   By: waziz <waziz@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 21:02:12 by waziz             #+#    #+#             */
-/*   Updated: 2024/03/13 15:46:22 by waziz            ###   ########.fr       */
+/*   Updated: 2024/03/15 13:44:48 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void  dollars_parse(char **arg_more, int t)
     arg_more = new;
 }
 // Fonction qui mesure la taille d'un tableau à deux dimensions.
-static int  tablen(char **tab)
+int  tablen(char **tab)
 {
     int i;
 

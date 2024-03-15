@@ -6,7 +6,7 @@
 /*   By: waziz <waziz@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 20:27:02 by waziz             #+#    #+#             */
-/*   Updated: 2024/03/03 23:28:40 by waziz            ###   ########.fr       */
+/*   Updated: 2024/03/15 14:33:50 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,10 @@ static void filtering_mult(char **filter_mult, char **search, char *tmp,int skip
             if (strncmp(tmp, search[j], ft_strlen(tmp) - skip_a) != 0)
                 not++;
             if (strncmp(tmp, search[j], ft_strlen(tmp) - skip_a) == 0)
+            {
                 tmp = ft_strstr(tmp, search[j]);
+                tmp = tmp + ft_strlen(search[j]);
+            }
             j++;
         }
         if (not == 0)
@@ -117,30 +120,22 @@ static void filtering_mult(char **filter_mult, char **search, char *tmp,int skip
 //.. en début et en fin de chaine s'il y en a. 
 //Split "tmp" pour avoir chaque occurence dans une chaine de caractere qui sera contenu dans un **
 //Puis on retourne le tableau filtrer.
+// Prend en compte les partie entourer de " ou ' et les skip si nécéssaire.
 char **filter_more(char *input)
 {
     char    **filter_mult;
     char    **search;
     char    *tmp;
-    int     i;
     int     skip_a;
     int     skip_b;
 
     which_start_filter(filter_mult, input);
-    tmp = ft_strdup(ft_strchr(input, '*'));
-    i = ft_strlen(tmp);
-    while (tmp[i] != '*')
-    {
-        i--;
-        skip_a++;
-    }
-    if (i < ft_strlen(tmp))
-        tmp[i] = '\0';
-    search = ft_split(tmp, '*');
+    skip_quote_a(input, skip_a, skip_b);
+    skip_quote_b(input, skip_b);
+    tmp = ft_strdup(input + skip_b);
+    tmp[skip_a] = '\0';
+    search = init_search(tmp);
     free(tmp);
-    skip_b = 0;
-    while (input[skip_b] != *)
-        skip_b++;
     filtering_mult(filter_mult, search, tmp, skip_a, skip_b);
     return (filter_mult);
 }
