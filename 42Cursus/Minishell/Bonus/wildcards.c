@@ -6,7 +6,7 @@
 /*   By: waziz <waziz@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:33:12 by waziz             #+#    #+#             */
-/*   Updated: 2024/03/15 10:18:09 by waziz            ###   ########.fr       */
+/*   Updated: 2024/03/16 10:23:48 by waziz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,15 @@ static char    **filter_simple(char *input)
 // Fonction qui détermine s'il y a plus ou moins d'un wildcard.
 static int  init_check(char *input)
 {
-    int i;
-    int j;
+    int skip_b;
+    int skip_a;
     int check;
     
-    i = 0;
-    skip_quote_bmult(input, i);
-    skip_quote_amult(input, j, 0);
-    check = ft_strlen(input) - i - j;
+    skip_quote_b(input, skip_b, 0);
+    while (input[skip_b + 1] == '*')
+        skip_b++;
+    skip_quote_a(input, skip_a, 0);
+    check = ft_strlen(input) - (skip_b + skip_a);
     return (check);
 }
 
