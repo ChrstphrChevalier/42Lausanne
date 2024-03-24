@@ -1,4 +1,4 @@
-# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/6a421f53-2e94-40e4-93ab-5fd89748879d) </p>
+# <p align="center"> ![image](https://github.com/ChrstphrChevalier/42Lausanne/assets/146819291/90e2ef61-5915-4429-ab73-96203c83976b) </p>
 
 # <p align="center"> - Goals - </p>
 
