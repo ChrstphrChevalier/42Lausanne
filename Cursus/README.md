@@ -2,7 +2,11 @@
 
 # <p align="center"> - *Summary* - </p>
 
-##### <p align="center"> *The LIBFT is a cornerstone in the training of programming students. It consists of recreating certain functions from the standard C library (33), thus providing an in-depth understanding of the language and its mechanisms. This challenging dice allows students to gain valuable expertise in data manipulation and algorithms. By developing their own library, students learn essential skills to become versatile and competent programmers.* </p>
+##### <p align="center"> *The LIBFT is a cornerstone in the training of programming students.* </p>
+
+##### <p align="center"> *It consists of recreating certain functions from the standard C library (33), thus providing an in-depth understanding of the language and its mechanisms.* </p>
+
+##### <p align="center"> *This challenging dice allows students to gain valuable expertise in data manipulation and algorithms. By developing their own library, students learn essential skills to become versatile and competent programmers.* </p>
 
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/6e883ad2-29bf-4c6d-a15e-dc8ce20d6b2d) </p>
 
