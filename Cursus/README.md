@@ -12,7 +12,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *LIBFT*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Libft) </p>
+### <p align="center"> *My* [LIBFT](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Libft) </p>
 
 # <p align="center">       </p>
 
@@ -32,7 +32,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *GetNextLine*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/GetNextLine) </p>
+### <p align="center"> *My* [GetNextLine](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/GetNextLine) </p>
 
 # <p align="center">       </p>
 
@@ -52,7 +52,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *Printf*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Printf) </p>
+### <p align="center"> *My* [Printf](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Printf) </p>
 
 # <p align="center">       </p>
 
@@ -72,7 +72,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *Born2Beroot*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Born2beroot) </p>
+### <p align="center"> *My* [Born2Beroot](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Born2beroot) </p>
 
 # <p align="center">       </p>
 
@@ -92,7 +92,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *Push_Swap*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Push_swap) </p>
+### <p align="center"> *My* [Push_Swap](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Push_swap) </p>
 
 # <p align="center">       </p>
 
@@ -112,7 +112,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *Minitalk*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Minitalk) </p>
+### <p align="center"> *My* [Minitalk](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Minitalk) </p>
 
 # <p align="center">       </p>
 
@@ -130,7 +130,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *So_long*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/So_long) </p>
+### <p align="center"> *My* [So_long](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/So_long) </p>
 
 # <p align="center">       </p>
 
@@ -149,7 +149,7 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *Philosopher*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Philosopher) </p>
+### <p align="center"> *My* [Philosopher](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Philosopher) </p>
 
 # <p align="center">       </p>
 
@@ -167,6 +167,6 @@
 
 # <p align="center"> - *View my Project* - </p>
 
-### <p align="center"> [My *Minishell*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Minishell) </p>
+### <p align="center"> *My* [Minishell](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Minishell) </p>
 
 # <p align="center">       </p>
