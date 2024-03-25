@@ -8,6 +8,14 @@
 
 ##### <p align="center"> *This challenging dice allows students to gain valuable expertise in data manipulation and algorithms. By developing their own library, students learn essential skills to become versatile and competent programmers.* </p>
 
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *LIBFT*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Libft) </p>
+
+# <p align="center">       </p>
+
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/6e883ad2-29bf-4c6d-a15e-dc8ce20d6b2d) </p>
 
 # <p align="center"> - *Summary* - </p>
@@ -19,6 +27,14 @@
 ##### <p align="center"> *This complex task highlights skills in pointer manipulation, memory management, and algorithmic problem solving.* </p> 
 
 ##### <p align="center"> *By successfully completing this project, we demonstrate a deep understanding of the fundamental concepts of the C language and systems programming.* </p>
+
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *GetNextLine*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/GetNextLine) </p>
+
+# <p align="center">       </p>
 
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/272d423a-daf9-46ea-b8bf-487c5d6f2fbd) </p>
 
@@ -32,6 +48,14 @@
 
 ##### <p align="center"> *By passing this challenge, they gain valuable expertise in manipulating data flows and solving complex algorithmic problems.* </p>
 
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *Printf*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Printf) </p>
+
+# <p align="center">       </p>
+
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/f38dfe52-ccb0-4734-bbae-3fcb4f6ffab2) </p>
 
 # <p align="center"> - *Summary* - </p>
@@ -44,17 +68,33 @@
 
 ##### <p align="center"> *By successfully completing this project, we acquire essential practical skills to deploy and secure professional IT infrastructures.* </p>
 
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *Born2Beroot*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Born2beroot) </p>
+
+# <p align="center">       </p>
+
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/7aded40b-3934-4bd9-9b94-ab38682b1640) </p>
 
 # <p align="center"> - *Summary* - </p>
 
-##### <p align="center"> *The Pushswap project is an algorithmic die where we need to sort a stack of integers using a limited number of operations.* </p>
+##### <p align="center"> *The Push_swap project is an algorithmic die where we need to sort a stack of integers using a limited number of operations.* </p>
 
 ##### <p align="center"> *In developing efficient algorithms, they must minimize the number of moves necessary to arrive at a sorted state.* </p>
 
 ##### <p align="center"> *This project highlights our skills in optimization and algorithmic analysis, while familiarizing them with data structures.* </p>
 
 ##### <p align="center"> *By succeeding, we demonstrate our ability to solve complex problems efficiently and creatively.* </p>
+
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *Push_Swap*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Push_swap) </p>
+
+# <p align="center">       </p>
 
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/fc7940d4-055c-4206-99f8-4943ebed0201) </p>
 
@@ -68,6 +108,14 @@
 
 ##### <p align="center"> *By successfully completing this project, we demonstrate the ability to manage interactions between processes in a robust and synchronized manner.* </p>
 
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *Minitalk*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Minitalk) </p>
+
+# <p align="center">       </p>
+
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/27574024-33f5-4fc3-b8a3-0e10f2e38228) </p>
 
 # <p align="center"> - *Summary* - </p>
@@ -77,6 +125,15 @@
 ##### <p align="center"> *We need to design "Winner" and "Game Over" states, manage player-environment interactions, and implement features such as movement and item collection.* </p>
 
 ##### <p align="center"> *This challenging dice highlights skills in programming, memory management and image manipulation. By successfully completing this project, we gain valuable hands-on experience in video game development.* </p>
+
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *So_long*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/So_long) </p>
+
+# <p align="center">       </p>
+
 
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/732ee45b-5a3d-42eb-9d6d-6f39706a0c4d) </p>
 
@@ -88,6 +145,14 @@
 
 ##### <p align="center"> *By successfully completing this project, we demonstrate our ability to solve complex problems efficiently and elegantly in a multi-process environment.* </p>
 
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *Philosopher*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Philosopher) </p>
+
+# <p align="center">       </p>
+
 # <p align="center"> ![image](https://github.com/ChrstphrChevalier/42/assets/146819291/ee5cafd6-35ac-4b06-bed8-00a9618e166d) </p>
 
 # <p align="center"> - *Summary* - </p>
@@ -97,3 +162,11 @@
 ##### <p align="center"> *We need to create a shell capable of reading, parsing and executing Unix commands, while managing processes and providing features such as file management. directories and environment variables.* </p>
 
 ##### <p align="center"> *By successfully completing this project, we gain a deep understanding of the inner workings of Unix shells and operating systems.* </p>
+
+# <p align="center">       </p>
+
+# <p align="center"> - *View my Project* - </p>
+
+### <p align="center"> [My *Minishell*](https://github.com/ChrstphrChevalier/42/tree/main/Cursus/Minishell) </p>
+
+# <p align="center">       </p>
